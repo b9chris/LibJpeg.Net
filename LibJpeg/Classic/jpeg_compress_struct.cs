@@ -954,15 +954,12 @@ namespace BitMiracle.LibJpeg.Classic
 					jpeg_set_colorspace_SET_COMP(2, 0x42 /* 'B' */, 1, 1, 0, 0, 0);
 					break;
 
-				// Used to encode RGB source images.
+				// Used to encode RGB and YCbCr source images.
 				case J_COLOR_SPACE.JCS_YCbCr:
 					m_write_JFIF_header = true; /* Write a JFIF marker */
 					m_num_components = 3;
 					/* JFIF specifies component IDs 1,2,3 */
 					/* We default to 2x2 subsamples of chrominance */
-					//jpeg_set_colorspace_SET_COMP(0, 1, 2, 2, 0, 0, 0);
-					//jpeg_set_colorspace_SET_COMP(1, 2, 1, 1, 1, 1, 1);
-					//jpeg_set_colorspace_SET_COMP(2, 3, 1, 1, 1, 1, 1);
 					jpeg_set_colorspace_SET_COMP(0, 1, yHsamp, yVsamp, 0, 0, 0);
 					jpeg_set_colorspace_SET_COMP(1, 2, cbHsamp, cbVsamp, 1, 1, 1);
 					jpeg_set_colorspace_SET_COMP(2, 3, crHsamp, crVsamp, 1, 1, 1);

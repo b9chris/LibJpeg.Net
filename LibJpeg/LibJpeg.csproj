@@ -111,6 +111,7 @@
     <Compile Include="IDecompressDestination.cs" />
     <Compile Include="IRawImage.cs" />
     <Compile Include="Jpeg.cs" />
+    <Compile Include="JpegHelper.cs" />
     <Compile Include="JpegImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classic\ReadResult.cs" />

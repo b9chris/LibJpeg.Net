@@ -291,6 +291,19 @@ namespace BitMiracle.LibJpeg
 		}
 
 		/// <summary>
+		/// Saves the jpeg to a file.
+		/// </summary>
+		/// <param name="filename">Path to save to. Will create or overwrite if existing.</param>
+		/// <param name="parameters">Optional compression parameters.</param>
+		public void Save(string filename, CompressionParameters parameters = null)
+		{
+			using(var stream = File.OpenWrite(filename))
+			{
+				WriteJpeg(stream, parameters);
+			}
+		}
+
+		/// <summary>
 		/// Writes decompressed image data as bitmap to stream.
 		/// </summary>
 		/// <param name="output">Output stream.</param>

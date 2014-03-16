@@ -37,8 +37,8 @@ namespace BitMiracle.LibJpeg
 		public CompressionParameters()
 		{
 			Subsampling =
-				LibJpeg.Subsampling.HighDetail_4_4_4;
-				//LibJpeg.Subsampling.LowDetail_4_1_1;
+				//LibJpeg.Subsampling.HighDetail_4_4_4;
+				LibJpeg.Subsampling.LowDetail_4_1_1;
 		}
 
 		internal CompressionParameters(CompressionParameters parameters)
